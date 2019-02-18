@@ -84,7 +84,7 @@ class KnpLastTweetsExtension extends Extension
                 break;
         }
 
-        $container->setAlias('knp_last_tweets.last_tweets_fetcher', 'knp_last_tweets.last_tweets_fetcher.' . $driver);
+        $container->setAlias('knp_last_tweets.last_tweets_fetcher', 'knp_last_tweets.last_tweets_fetcher.' . $driver)->setPublic(true);
     }
 
     protected function oauthExists()
@@ -118,9 +118,9 @@ class KnpLastTweetsExtension extends Extension
 
                 $loader->load($driverOptions['method'] . '.yml');
 
-                $container->setAlias('knp_last_tweets.last_tweets_additional_fetcher', 'knp_last_tweets.last_tweets_fetcher.' . $driverOptions['method']);
+                $container->setAlias('knp_last_tweets.last_tweets_additional_fetcher', 'knp_last_tweets.last_tweets_fetcher.' . $driverOptions['method'])->setPublic(true);
             } else {
-                $container->setAlias('knp_last_tweets.last_tweets_additional_fetcher', 'knp_last_tweets.last_tweets_fetcher.api');
+                $container->setAlias('knp_last_tweets.last_tweets_additional_fetcher', 'knp_last_tweets.last_tweets_fetcher.api')->setPublic(true);
             }
         }
 
