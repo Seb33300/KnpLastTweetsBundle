@@ -9,4 +9,5 @@ services:
 
     buzz:
         class: Buzz\Browser
+        public: true
         arguments: ["@buzz.client", "@buzz.message_factory"]

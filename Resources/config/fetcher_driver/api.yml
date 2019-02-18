@@ -7,5 +7,6 @@ services:
 
      knp_last_tweets.last_tweets_fetcher.api:
         class: '%knp_last_tweets.last_tweets_fetcher.api.class%'
+        public: true
         arguments:
             - "@api_browser"

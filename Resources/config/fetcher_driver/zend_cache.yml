@@ -8,6 +8,7 @@ parameters:
 services:
     knp_last_tweets.last_tweets_fetcher.zend_cache:
         class: '%knp_last_tweets.last_tweets_fetcher.zend_cache.class%'
+        public: true
         arguments:
             - '@knp_last_tweets.last_tweets_additional_fetcher'
             - '@knp_zend_cache.manager'

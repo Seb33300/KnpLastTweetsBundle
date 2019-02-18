@@ -7,5 +7,6 @@ parameters:
 services:
     knp_last_tweets.last_tweets_fetcher.doctrine_cache:
         class: '%knp_last_tweets.last_tweets_fetcher.doctrine_cache.class%'
+        public: true
         arguments:
             - '@knp_last_tweets.last_tweets_additional_fetcher'

@@ -4,6 +4,7 @@ parameters:
 services:
     knp_last_tweets.last_tweets_fetcher.array:
         class: '%knp_last_tweets.last_tweets_fetcher.array.class%'
+        public: true
         arguments:
             -
                 -

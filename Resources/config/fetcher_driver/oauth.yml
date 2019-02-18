@@ -7,5 +7,6 @@ services:
 
      knp_last_tweets.last_tweets_fetcher.oauth:
         class: '%knp_last_tweets.last_tweets_fetcher.oauth.class%'
+        public: true
         arguments:
             - "@oauth_browser"
